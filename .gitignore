@@ -16,8 +16,10 @@
 !/log/.keep
 /tmp
 
+#
 # Files copied from Rails.gitignore
 # Duplicates from above lines commented out
+#
 *.rbc
 capybara-*.html
 .rspec
