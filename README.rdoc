@@ -1,5 +1,7 @@
 == README
 
+This README is for my app fro my e-portfolio site.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
