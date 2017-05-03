@@ -13,6 +13,7 @@
     <p class="item-name"><%= product.name %></p>
     <hr>
     <%= image_tag(product.image_url, class: "img-responsive item-img" ) %>
+    <p class="item-price"><strong>$ <%= number_with_precision(product.price, precision: 2) %></strong></p>
     <p class="item-clr"><strong>Colour: </strong><%= product.colour %></p>
     <p class="item-desc"><%= product.description %></p>
     <hr>
