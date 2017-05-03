@@ -1,6 +1,18 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+    text-align: center;
+}
+.add-link:link {
+    color: black;
+}
+.add-link:visited {
+    color: black;
+}
+.add-link:hover {
+    color: white;
+}
 .item-list {
     width: 90%;
     margin: auto;
@@ -46,6 +58,7 @@ hr {
     font-size: 0.8em;
     margin: 0;
 }
+
 .edit-op{
     border-left: 1px solid #738ca6;
     border-right: 1px solid #738ca6;
@@ -57,6 +70,12 @@ hr {
 .product-img{
     margin: auto;
 }
-.edit-back{
-    color: #133253;
+.option-link:link{
+    color: black;
+}
+.option-link:visited{
+    color: black;
+}
+.option-link:hover{
+    color: white;
 }
