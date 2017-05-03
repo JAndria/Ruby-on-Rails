@@ -1,3 +1,62 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.item-list {
+    width: 90%;
+    margin: auto;
+}
+.item-box {
+    padding: 15px;
+}
+.item {
+    border: 1px solid #133253;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+}
+.item-name {
+    text-align: center;
+    font-weight: 900;
+    font-size: 2em;
+    margin: 0 0 20px 0;
+    color: #133253;
+    font-family: 'Josefin Sans', Century Gothic, Arial, sans-serif;
+}
+.item-img {
+    padding: 30px;
+}
+.item-desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;     /* fallback */
+    max-height: 16px;      /* fallback */
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-color: #738ca6;
+}
+.item-options{
+    text-align: center;
+}
+.item-options p{
+    font-size: 0.8em;
+    margin: 0;
+}
+.edit-op{
+    border-left: 1px solid #738ca6;
+    border-right: 1px solid #738ca6;
+}
+
+.product-box{
+    margin-top: 25px;
+}
+.product-img{
+    margin: auto;
+}
+.edit-back{
+    color: #133253;
+}
