@@ -36,6 +36,9 @@ h1 {
 }
 .item-img {
     padding: 30px;
+    max-height: 300px;
+    width: auto;
+    margin: auto;
 }
 .item-desc {
     overflow: hidden;
