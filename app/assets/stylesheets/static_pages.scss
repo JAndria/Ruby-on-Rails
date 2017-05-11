@@ -27,7 +27,16 @@ h1 {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
-.item img {
+.carousel-inner .item {
+    padding: 0;
+}
+.carousel-inner .item img {
     margin: auto;
+}
+.carousel {
+    height: 500px;
+    overflow: hidden;
+}
+.carousel-inner .item{
+    height: 500px;
 }
