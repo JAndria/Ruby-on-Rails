@@ -1,4 +1,5 @@
-<%= form_for(@product) do |f| %>
+<div class="container">
+<%= form_for(@product, html: { class: "form-horizontal" }) do |f| %>
   <% if @product.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
@@ -11,27 +12,40 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="field form-group row">
+    <%= f.label :name, nil, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+    <%= f.text_field :name, class:"form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+  <div class="field form-group row">
+    <%= f.label :description, nil, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+    <%= f.text_area :description, class:"form-control", rows: "3" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :image_url %><br>
-    <%= f.text_field :image_url %>
+  <div class="field form-group row">
+    <%= f.label :image_url, nil, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+    <%= f.text_field :image_url, class:"form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :colour %><br>
-    <%= f.text_field :colour %>
+  <div class="field form-group row">
+    <%= f.label :colour, nil, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+    <%= f.text_field :colour, class:"form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
+  <div class="field form-group row">
+    <%= f.label :price, nil, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+    <%= f.text_field :price, class:"form-control" %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+    <%= f.submit nil, class:"btn btn-primary"%>
+    </div>
   </div>
 <% end %>
+</div>
