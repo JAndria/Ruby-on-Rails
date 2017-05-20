@@ -50,3 +50,6 @@ end
 group :production do
   gem 'pg'
 end
+
+# Devise provides the ability to authenticate a user in the app using the register, sign in, and sign out functions
+gem 'devise'
