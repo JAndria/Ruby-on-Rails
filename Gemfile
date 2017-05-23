@@ -53,3 +53,6 @@ end
 
 # Devise provides the ability to authenticate a user in the app using the register, sign in, and sign out functions
 gem 'devise'
+
+# CanCanCan an updated version of CanCan, a great Authorization gem by Ryan Bates
+gem 'cancancan', '~> 1.10'
