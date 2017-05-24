@@ -1,5 +1,39 @@
 <h1>Orders</h1>
 
-<div class="container-fluid item-list">
-  
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>User</th>
+      <th>Total</th>
+      <th colspan="1">SPACE</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <% if order.product.nil? %>
+          <td>EMPTY</td>
+        <% else %>
+          <td><%= order.product.name %></td>
+        <% end %>
+        
+        <% if order.user.nil? %>
+          <td>EMPTY</td>
+        <% else %>
+          <td><%= order.user.email %></td>
+        <% end %>
+        
+        <% if order.total.nil? %>
+          <td>EMPTY</td>
+        <% else %>
+          <td><%= order.total %></td>
+        <% end %>
+
+        <td><%= link_to 'Show', order, class: "option-link" %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
