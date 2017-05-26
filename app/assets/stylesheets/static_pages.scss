@@ -19,10 +19,9 @@ body {
     background: linear-gradient(to right, rgba(150,104,84,1) 0%, rgba(69,34,19,1) 100%);*/
 }
 
-.brandName a {
-    color: white;
-    font-size: 1.25em;
-}
+/*.brandName {
+    font-size: 2.5em;
+}*/
 
 .navbar .navbar-nav {
     display: inline-block;
@@ -32,14 +31,26 @@ body {
     text-align: center;
 }
 
-@media (min-width: 768px) {
-    #top-bar .input-group {
-        left: -50px;
-    }
+@media (min-width: 968px) {
     #top-bar input[type=text] {
-        width: 500px;
+        width: 425px;
+    }
+    #top-bar input {
+        left: 30px;
+    }
+    #login-bar {
+        width: 200px;
     }
 }
+@media (min-width: 768px) and (max-width: 967px)  {
+    #top-bar input {
+        left: 23px;
+    }
+    #login-bar {
+        width: 200px;
+    }
+}
+
 
 #bottom-bar {
     background-color: white;
