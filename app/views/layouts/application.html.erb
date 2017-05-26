@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Shop</title>
+  <title>Genetisoric</title>
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Audiowide">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Orbitron">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Exo">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -26,7 +29,7 @@
         <span class="icon-bar"></span>
       </button><!-- end button -->
       <div class="navbar-brand brandName">
-        <%= link_to 'Store Brand', root_path %>
+        <%= link_to 'Genetistoric ~', root_path %>
       </div><!-- end projectName -->
     </div><!-- end navbar-header -->
     
@@ -56,41 +59,61 @@
             </ul>
           </li>
         <% else %>
+          <li><%= link_to('Sign Up', new_user_registration_path) %></li>
           <li><%= link_to('Login', new_user_session_path) %></li>
         <% end %>
         </ul>
       
     </div><!-- end navbar-collapse -->
     
-    
     <div class="navbar-collapse collapse" id="bottom-bar">
        <ul class="nav navbar-nav">
-        <li><%= link_to 'Home', root_path %></li>
-        <li><%= link_to 'All Products', products_path %></li>
-        <li><%= link_to 'About', static_pages_about_path %></li>
-        <li><%= link_to 'Contact', static_pages_contact_path %></li>
+        <li>
+          <% if current_page?(root_path) %>
+            <%= link_to 'Home', root_path, :class => "navActive" %>
+          <% else %>
+            <%= link_to 'Home', root_path %>
+          <% end %>
+        </li>
+        <li>
+          <% if current_page?(products_path) %>
+            <%= link_to 'All Products', products_path, :class => "navActive" %>
+          <% else %>
+            <%= link_to 'All Products', products_path %>
+          <% end %>
+        </li>
+        <li>
+          <% if current_page?(static_pages_about_path) %>
+            <%= link_to 'About', static_pages_about_path, :class => "navActive" %>
+          <% else %>
+            <%= link_to 'About', static_pages_about_path %>
+          <% end %>
+        </li>
+        <li>
+          <% if current_page?(static_pages_contact_path) %>
+            <%= link_to 'Contact', static_pages_contact_path, :class => "navActive" %>
+          <% else %>
+            <%= link_to 'Contact', static_pages_contact_path %>
+          <% end %>
+        </li>
       </ul>
     </div><!-- end navbar-collapse -->
-    
-    
-
 </nav><!-- end navbar -->
 
-
-
-
-
-
-
-
+<div class="divAlert">
 <% if notice %>
   <p id="notice" class="alert alert-info"><%= notice %></p>
 <% end %>
 <% if alert %>
   <p id="alert" class="alert alert-info"><%= alert %></p>
 <% end %>
+</div>
+
+
 
 <%= yield %>
+
+
 
 <footer class="footer navbar navbar-default navbar-fixed-bottom">
   <div class="container-fluid">
