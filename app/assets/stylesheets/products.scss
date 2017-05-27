@@ -1,9 +1,45 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-h1 {
-    text-align: center;
+
+.item {
+    //border: 1px solid #133253;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    //font-family: 'Exo', Century Gothic, Arial, sans-serif;
 }
+
+.item-box .item .item-name {
+    font-family: 'Orbitron', Century Gothic, Arial, sans-serif;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 900;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-clr, .item-desc {
+    font-family: 'Exo', Century Gothic, Arial, sans-serif;
+}
+
+.item-clr {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;     /* fallback */
+    max-height: 16px;      /* fallback */
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.toBold {
+    font-weight: 900;
+}
+
+
+
 .add-link:link {
     color: black;
 }
@@ -20,20 +56,20 @@ h1 {
 .item-box {
     padding: 15px;
 }
-.item {
+/*.item {
     border: 1px solid #133253;
     border-radius: 10px;
     padding: 15px;
     background-color: white;
-}
-.item-name {
+}*/
+/*.item-name {
     text-align: center;
     font-weight: 900;
     font-size: 2em;
     margin: 0 0 20px 0;
     color: #133253;
     font-family: 'Josefin Sans', Century Gothic, Arial, sans-serif;
-}
+}*/
 .item-img {
     padding: 30px;
     max-height: 300px;
@@ -52,7 +88,7 @@ h1 {
 hr {
     margin-top: 10px;
     margin-bottom: 10px;
-    border-color: #738ca6;
+    border-color: #f58220;
 }
 .item-options{
     text-align: center;
@@ -63,8 +99,8 @@ hr {
 }
 
 .edit-op{
-    border-left: 1px solid #738ca6;
-    border-right: 1px solid #738ca6;
+    border-left: 1px solid #f58220;
+    border-right: 1px solid #f58220;
 }
 
 .product-box{
@@ -72,6 +108,10 @@ hr {
 }
 .product-img{
     margin: auto;
+}
+
+.option-link {
+    font-size: 0.75em;
 }
 .option-link:link{
     color: black;

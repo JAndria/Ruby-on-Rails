@@ -1,11 +1,17 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  
 
-<h1>Products</h1>
+<h1 class="pageHeader">Available Specimens</h1>
+<div class="headerDiv"></div>
 
 <div class="col-md-12 col-xs-12">
-<%= link_to '+ Add New Product', new_product_path, class: "add-link" %>
+    <%= link_to new_product_path do %>
+        <span class="glyphicon glyphicon-plus-sign"></span> Add New Product
+    <% end %>
 </div>
 
 <div class="container-fluid item-list">
   <%= render @products %>
+</div>
+
 </div>
