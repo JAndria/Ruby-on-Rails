@@ -1,6 +1,8 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Layout
 * {
     font-family: 'Exo', Century Gothic, Arial, sans-serif;
     font-size: 1.1em;
@@ -10,27 +12,24 @@ body {
     background-color: #d6d3cf;
     margin-bottom: 3.05em;
 }
-
 .container {
     background-color: #efefef;
     min-height: 100vh;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+//Navigation Bar
 .navbar .navbar-brand a:hover {
     color: #f58220;
-    //text-shadow: 0 0 2px #1277a5, 0 0 3px #1277a5, 0 0 5px #54c5f9;
     text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 7px white;
     background-color: transparent;
     text-decoration: none;
 }
-
 .navbar .navbar-brand a {
     width: 250px;
     font-size: 1.55em;
     font-family: 'Audiowide', Century Gothic, Arial, sans-serif;
 }
-
 .navbar .navbar-nav {
     display: inline-block;
     float: none;
@@ -38,27 +37,6 @@ body {
 .navbar .navbar-collapse {
     text-align: center;
 }
-
-@media (min-width: 998px) {
-    #top-bar input[type=text] {
-        width: 425px;
-    }
-    #top-bar input {
-        left: -35px;
-    }
-    #login-bar {
-        width: 200px;
-    }
-}
-@media (min-width: 768px) and (max-width: 997px)  {
-    #top-bar input {
-        left: -33px;
-    }
-    #login-bar {
-        width: 200px;
-    }
-}
-
 #bottom-bar {
     background-color: #f58220;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -80,13 +58,6 @@ body {
     border-bottom: 5px solid black;
 }
 
-.divAlert {
-    position: fixed;
-}
-.alert {
-    border-radius: 0 100px 100px 0;
-}
-
 .main-header {
     background-color: white;
     padding-top: 3px;
@@ -103,6 +74,61 @@ body {
     margin: 0;
     padding-bottom: 5px;
 }
+    
+@media (min-width: 998px) {
+    #top-bar input[type=text] {
+        width: 425px;
+    }
+    #top-bar input {
+        left: -35px;
+    }
+    #login-bar {
+        width: 200px;
+    }
+    
+    //Landing Page
+    
+    
+}
+@media (min-width: 768px) and (max-width: 997px)  {
+    #top-bar input {
+        left: -33px;
+    }
+    #login-bar {
+        width: 200px;
+    }
+}
+@media (max-width: 767px){
+    body {
+        padding-top: 4em;
+        background-color: #d6d3cf;
+        margin-bottom: 3.05em;
+    }
+    .main-header h1 {
+        font-size: 2.5em;
+        font-family: 'Audiowide', Century Gothic, Arial, sans-serif;
+        margin-bottom: 0;
+        margin-top: 0.1em;
+    }
+    .main-header h3 {
+        margin: 0;
+        padding-bottom: 5px;
+        font-size: 1.25em;
+    }
+    
+}
+
+
+.divAlert {
+    position: fixed;
+}
+.alert {
+    border-radius: 0 100px 100px 0;
+}
+
+
+
+
 
 .footer {
     min-height: 40px;
