@@ -2,5 +2,6 @@
   <%= image_tag(product.image_url) %>
   <div class="carousel-caption">
     <h2><%= product.name %></h2>
+    <div class = "rated" data-score="<%= product.average_rating %>"></div>
   </div>
 </div>

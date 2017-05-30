@@ -10,6 +10,8 @@
   <div class="col-md-6 col-xs-12 product-info">
     <h2 class="product-name"><%= @product.name %></h2>
     <br>
+    <p>Average Rating: <div class = "rated" data-score="<%= @product.average_rating %>"></div></p>
+    <br>
     <h3><span class="prod-label">Price: </span>$ <%= number_with_precision(@product.price, precision: 2) %></h3>
     <br>
     <p><span class="prod-label">Color: </span><%= @product.colour %></p>
@@ -18,18 +20,20 @@
 
 <div class="container-fluid col-md-12">
   <ul class="nav nav-tabs nav-justified">
-    <li class="active"><a data-toggle="tab" href="#desc">Description</a></li>
-    <li><a data-toggle="tab" href="#comment">Ratings and Comments</a></li>
+    <li class="<%= 'active' if params[:tab] == 'desc' %>"><a data-toggle="tab" href="#desc">Description</a></li>
+    <li class="<%= 'active' if params[:tab] == 'comment' %>"><a data-toggle="tab" href="#comment">Ratings and Comments</a></li>
   </ul>
   
   <div class="tab-content">
-    <div id="desc" class="tab-pane fade in active">
+    <div id="desc" class="<%= if (params[:tab] == 'desc' || !params[:tab])then 'tab-pane fade in active'  else 'tab-pane fade' end%>">
       <h3><strong>Description</strong></h3>
       <p><%= @product.description %></p>
     </div>
     
-    <div id="comment" class="tab-pane fade">
-      <h3>Placeholder: content to be added later.</h3>
+    <div id="comment" class="<%= if params[:tab] == 'comment' then 'tab-pane fade in active'  else 'tab-pane fade' end%>">
+      <h3>Comments & Ratings</h3>
+      <%= render 'new_comment' %>
+      <%= render 'comments' %>
     </div>
     
   </div>
