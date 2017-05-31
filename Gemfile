@@ -56,3 +56,6 @@ gem 'devise'
 
 # CanCanCan an updated version of CanCan, a great Authorization gem by Ryan Bates
 gem 'cancancan', '~> 1.10'
+
+# Gemfile for Rails 3+, Sinatra, or Merb
+gem 'will_paginate', '~> 3.1.1'

@@ -18,6 +18,7 @@
   </div>
 </div>
 
+<div id="tabbed-content"></div>
 <div class="container-fluid col-md-12">
   <ul class="nav nav-tabs nav-justified">
     <li class="<%= 'active' if params[:tab] == 'desc' %>"><a data-toggle="tab" href="#desc">Description</a></li>
@@ -34,6 +35,7 @@
       <h3>Comments & Ratings</h3>
       <%= render 'new_comment' %>
       <%= render 'comments' %>
+      <%= will_paginate @comments, params: {tab: 'comment', anchor: 'tabbed-content'} %>
     </div>
     
   </div>

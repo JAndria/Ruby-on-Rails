@@ -6,10 +6,10 @@ class CommentsController < ApplicationController
     @comment.user = current_user
     respond_to do |format|
       if @comment.save
-        format.html {redirect_to product_path(@product, tab:"comment"), notice: "Comment was created successfully."}
+        format.html {redirect_to product_path(@product, tab:"comment", anchor: "tabbed-content"), notice: "Comment was created successfully."}
         format.json { render :show, status: :created, location: @product }
       else
-        format.html {redirect_to product_path(@product, tab:"comment"), notice: "Comment was not created successfully."}
+        format.html {redirect_to product_path(@product, tab:"comment", anchor: "tabbed-content"), notice: "Comment was not created successfully."}
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end

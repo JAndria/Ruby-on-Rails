@@ -201,3 +201,13 @@ ol.carousel-indicators li.active {
     border-bottom: 5px solid #f58220;
     margin-bottom: 10px;
 }
+
+.pagination {
+    font-size: 0.75em;
+    .previous_page:not(.disabled), .next_page:not(.disabled) { color: #f58220; }
+    .previous_page:not(.disabled):hover, .next_page:not(.disabled):hover { font-weight: 900; color: #f58220; background: transparent; text-decoration: none; }
+    .previous_page.disabled, .next_page.disabled { color: black; }
+    a { color: #f58220; }
+    a:hover { font-weight: 900; color: #f58220; background: transparent; text-decoration: none; }
+    .current { padding: 0 0.5em; background-color:  #f58220; color: white; }
+}
