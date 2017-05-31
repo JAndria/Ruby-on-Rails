@@ -132,8 +132,11 @@ hr {
 .option-link:visited{
     color: black;
 }
-.option-link:hover{
-    color: white;
+.option-link:hover, .new-link:hover{
+    color: #f58220;
+    background: transparent;
+    text-decoration: none;
+    font-weight: 900;
 }
 .container-fluid .nav li:not(.active) a:hover {
     color: #f58220;
