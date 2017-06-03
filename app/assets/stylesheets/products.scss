@@ -12,10 +12,10 @@
 }
 
 .item-box .item .item-name {
+    a { font-size: 1.5em; font-weight: 900; color: black; }
+    a:hover { color: #f58220; background-color: transparent; text-decoration: none;}
     font-family: 'Orbitron', Century Gothic, Arial, sans-serif;
     text-align: center;
-    font-size: 1em;
-    font-weight: 900;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -56,20 +56,7 @@
 .item-box {
     padding: 15px;
 }
-/*.item {
-    border: 1px solid #133253;
-    border-radius: 10px;
-    padding: 15px;
-    background-color: white;
-}*/
-/*.item-name {
-    text-align: center;
-    font-weight: 900;
-    font-size: 2em;
-    margin: 0 0 20px 0;
-    color: #133253;
-    font-family: 'Josefin Sans', Century Gothic, Arial, sans-serif;
-}*/
+
 .item-img {
     padding: 30px;
     max-height: 300px;

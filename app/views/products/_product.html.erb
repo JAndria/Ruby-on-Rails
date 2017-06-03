@@ -1,12 +1,15 @@
 <div class="col-md-3 col-xs-12 item-box">
   <div class="item">
-    <p class="item-name"><%= product.name %></p>
+    <p class="item-name"><%= link_to product.name, product_path(product.id, tab: "desc") %></p>
     <hr>
-    <%= image_tag(product.image_url, class: "img-responsive item-img" ) %>
+    <%= link_to image_tag(product.image_url, class: "img-responsive item-img" ), product_path(product.id, tab: "desc")%>
+ 
     <div class = "rated" data-score="<%= product.average_rating %>"></div>
     <p class="item-price"><span class="toBold">$ <%= number_with_precision(product.price, precision: 2) %></span></p>
     <p class="item-clr"><span class="toBold">Colour: </span><%= product.colour %></p>
     <p class="item-desc"><%= product.description %></p>
+    
+    <% if signed_in? && current_user.admin? %>
     <hr>
     <div class="col-md-4 col-xs-4 item-options show-op">
       <p><%= link_to 'Show', product_path(product.id, tab: "desc"), class: "option-link" %></p>
@@ -18,5 +21,7 @@
       <p><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "option-link" %></p>
     </div>
     <br>
+    <% end %>
+    
   </div>
 </div>

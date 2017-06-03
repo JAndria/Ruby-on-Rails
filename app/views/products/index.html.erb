@@ -4,11 +4,13 @@
 <h1 class="pageHeader">Available Specimens</h1>
 <div class="headerDiv"></div>
 
+<% if signed_in? && current_user.admin? %>
 <div class="col-md-12 col-xs-12">
     <%= link_to new_product_path, class: "new-link" do %>
         <span class="glyphicon glyphicon-plus-sign"></span> Add New Product
     <% end %>
 </div>
+<% end %>
 
 <div class="container-fluid item-list">
   <%= render @products %>
