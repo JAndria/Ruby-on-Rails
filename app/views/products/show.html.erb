@@ -32,7 +32,7 @@
     </div>
     
     <div id="comment" class="<%= if params[:tab] == 'comment' then 'tab-pane fade in active'  else 'tab-pane fade' end%>">
-      <h3>Comments & Ratings</h3>
+      <h3><strong>Comments & Ratings</strong></h3>
       <%= render 'new_comment' %>
       <%= render 'comments' %>
       <%= will_paginate @comments, params: {tab: 'comment', anchor: 'tabbed-content'} %>
