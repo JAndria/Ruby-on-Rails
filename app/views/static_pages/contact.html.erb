@@ -14,15 +14,15 @@
       </div>
     </div>      
     <div class="field form-group row">
-      <%= label_tag :email, "Email Address", class: "col-sm-2 control-label" %>
+      <%= label_tag :email, "Email Address*", class: "col-sm-2 control-label" %>
       <div class="col-sm-10">
-      <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+      <%= email_field_tag :email, nil, class: "form-control", placeholder: "Enter Email", :required => true %>
       </div>
     </div>
     <div class="field form-group row">
-      <%= label_tag :message, nil, class: "col-sm-2 control-label" %>
+      <%= label_tag :message, "Message*", class: "col-sm-2 control-label" %>
       <div class="col-sm-10">
-      <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+      <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message", :required => true %>
       </div>
     </div>      
 
