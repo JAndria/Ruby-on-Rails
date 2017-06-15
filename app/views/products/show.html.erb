@@ -1,6 +1,8 @@
 <div class="container">
 <br>
-<%= link_to 'Edit', edit_product_path(@product), class: "option-link" %> |
+<% if signed_in? && current_user.admin? %>
+  <%= link_to 'Edit', edit_product_path(@product), class: "option-link" %> |
+<% end %>
 <%= link_to 'Back', products_path, class: "option-link" %>
 
 <div class="container-fluid product-box">
@@ -43,7 +45,8 @@
 </div>
 
 <br>
-
-<%= link_to 'Edit', edit_product_path(@product), class: "option-link" %> |
+<% if signed_in? && current_user.admin? %>
+  <%= link_to 'Edit', edit_product_path(@product), class: "option-link" %> |
+<% end %>
 <%= link_to 'Back', products_path, class: "option-link" %>
 </div>
