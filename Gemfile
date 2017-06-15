@@ -37,6 +37,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  
+  #RSpec which is a Testing Gem that encourages BDD
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :development do
