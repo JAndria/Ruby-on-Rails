@@ -1,9 +1,11 @@
+require 'support/factory_girl'
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 
 
 # note: require 'devise' after require 'rspec/rails'
 require 'devise'
+
 
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)

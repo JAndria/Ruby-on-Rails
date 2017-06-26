@@ -2,7 +2,9 @@ require 'rails_helper'
 
 describe UsersController, type: :controller do
   
-  let(:user) {User.create!(email: 'functional@test.com', password: 'testpassword')}
+  
+  #let(:user) {User.create!(email: 'functional@test.com', password: 'testpassword')}
+  user = FactoryGirl.create(:user)
   let(:user2) {User.create!(email: 'test@test.com', password: 'password')}
   
   describe "GET #show" do
