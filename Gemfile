@@ -40,6 +40,8 @@ group :development, :test do
   
   #RSpec which is a Testing Gem that encourages BDD
   gem 'rspec-rails', '~> 3.5'
+  
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 group :development do
