@@ -5,7 +5,8 @@ describe UsersController, type: :controller do
   
   #let(:user) {User.create!(email: 'functional@test.com', password: 'testpassword')}
   user = FactoryGirl.create(:user)
-  let(:user2) {User.create!(email: 'test@test.com', password: 'password')}
+  #let(:user2) {User.create!(email: 'test@test.com', password: 'password')}
+  user2 = FactoryGirl.create(:user)
   
   describe "GET #show" do
     
