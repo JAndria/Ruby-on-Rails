@@ -17,6 +17,10 @@
     <h3><span class="prod-label">Price: </span>$ <%= number_with_precision(@product.price, precision: 2) %></h3>
     <br>
     <p><span class="prod-label">Color: </span><%= @product.colour %></p>
+    <br>
+    <%= form_tag "/payments/create" do %>
+      <%= render partial: "shared/stripe_checkout_button" %>
+    <% end %>
   </div>
 </div>
 
