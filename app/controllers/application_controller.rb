@@ -8,10 +8,15 @@ class ApplicationController < ActionController::Base
   end
   
   def after_sign_in_path_for(resource)
-    request.referrer
-  end
-  def after_sign_out_path_for(resource_or_scope)
-    request.referrer
+    if URI(request.referer).path == '/login'
+      root_path
+    else
+      request.referrer
+    end
   end
   
+  def after_sign_out_path_for(resource_or_scope)
+      request.referrer
+  end
+
 end
