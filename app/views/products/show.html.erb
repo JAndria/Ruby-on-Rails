@@ -24,7 +24,7 @@
         <%= render partial: "shared/stripe_checkout_button" %>
       <% end %>
     <% else %>
-      <p>You need to <%= link_to('Login', new_user_session_path) %> to purchase</p>
+      <p>You must login to purchase</p>
     <% end %>
   </div>
 </div>

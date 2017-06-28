@@ -37,6 +37,18 @@ body {
 .navbar .navbar-collapse {
     text-align: center;
 }
+.login-dropdown{
+    padding: 5px;
+    width: 300px;
+    background-color: #101010;
+    *{
+        margin: 3px;
+    }
+    .remember{
+        font-size: 1em;
+        color: gray;
+    }
+}
 #bottom-bar {
     background-color: #f58220;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
