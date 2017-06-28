@@ -18,8 +18,13 @@
     <br>
     <p><span class="prod-label">Color: </span><%= @product.colour %></p>
     <br>
-    <%= form_tag "/payments/create" do %>
-      <%= render partial: "shared/stripe_checkout_button" %>
+    <% if signed_in? %>
+      <%= form_tag "/payments/create" do %>
+        <%= hidden_field_tag(:product_id, @product.id) %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %>
+    <% else %>
+      <p>You need to <%= link_to('Login', new_user_session_path) %> to purchase</p>
     <% end %>
   </div>
 </div>
