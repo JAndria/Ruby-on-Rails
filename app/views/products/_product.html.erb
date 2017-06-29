@@ -8,7 +8,7 @@
     <p class="item-price"><span class="toBold">$ <%= number_with_precision(product.price, precision: 2) %></span></p>
     <p class="item-clr"><span class="toBold">Colour: </span><%= product.colour %></p>
     <p class="item-desc"><%= product.description %></p>
-    
+    <%# byebug %>
     <% if signed_in? && current_user.admin? %>
     <hr>
     <div class="col-md-4 col-xs-4 item-options show-op">
