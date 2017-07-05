@@ -12,7 +12,7 @@
   <div class="col-md-6 col-xs-12 product-info">
     <h2 class="product-name"><%= @product.name %></h2>
     <br>
-    <p>Average Rating: <div class = "rated" data-score="<%= @product.average_rating %>"></div></p>
+    <p>Average Rating: <div class = "rated" id = "average-rating" data-score="<%= @product.average_rating %>"></div></p>
     <br>
     <h3><span class="prod-label">Price: </span>$ <%= number_with_precision(@product.price, precision: 2) %></h3>
     <br>
@@ -44,8 +44,11 @@
     
     <div id="comment" class="<%= if params[:tab] == 'comment' then 'tab-pane fade in active'  else 'tab-pane fade' end%>">
       <h3><strong>Comments & Ratings</strong></h3>
-      <%= render 'new_comment' %>
-      <%= render 'comments' %>
+      <div id="comment-list">
+        <%= render 'new_comment' %>
+        <%= render 'comments' %>
+      </div>
+      
       <%= will_paginate @comments, params: {tab: 'comment', anchor: 'tabbed-content'} %>
     </div>
     
