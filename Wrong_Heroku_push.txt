@@ -1,0 +1,130 @@
+jhilliard:~/workspace (ajax) $ git push heroku master:ajax
+Total 0 (delta 0), reused 0 (delta 0)
+remote: Pushed to non-master branch, skipping build.
+To https://git.heroku.com/jhilliard.git
+ * [new branch]      master -> ajax
+
+
+jhilliard:~/workspace (ajax) $ git push heroku ajax:master
+Counting objects: 16, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (16/16), 1.91 KiB | 0 bytes/s, done.
+Total 16 (delta 9), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Ruby app detected
+remote: -----> Compiling Ruby/Rails
+remote: -----> Using Ruby version: ruby-2.3.4
+remote: -----> Installing dependencies using bundler 1.15.1
+remote:        Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment
+remote:        Fetching gem metadata from https://rubygems.org/........
+remote:        Fetching version metadata from https://rubygems.org/..
+remote:        Fetching dependency metadata from https://rubygems.org/.
+remote:        Using rake 12.0.0
+remote:        Using i18n 0.8.0
+remote:        Using json 1.8.6
+remote:        Using minitest 5.10.1
+remote:        Using thread_safe 0.3.5
+remote:        Using builder 3.2.3
+remote:        Using erubis 2.7.0
+remote:        Using mini_portile2 2.1.0
+remote:        Using rack 1.6.5
+remote:        Using mime-types-data 3.2016.0521
+remote:        Using arel 6.0.4
+remote:        Using thor 0.19.4
+remote:        Using concurrent-ruby 1.0.4
+remote:        Using bundler 1.15.1
+remote:        Using sass 3.4.23
+remote:        Using tilt 2.0.6
+remote:        Using execjs 2.7.0
+remote:        Using coffee-script-source 1.12.2
+remote:        Using turbolinks-source 5.0.0
+remote:        Using multi_json 1.12.1
+remote:        Using rdoc 4.3.0
+remote:        Using pg 0.20.0
+remote:        Using bcrypt 3.1.11
+remote:        Using orm_adapter 0.5.0
+remote:        Using cancancan 1.17.0
+remote:        Using will_paginate 3.1.5
+remote:        Using multipart-post 2.0.0
+remote:        Using tzinfo 1.2.2
+remote:        Using nokogiri 1.7.0.1
+remote:        Using rack-test 0.6.3
+remote:        Using warden 1.2.7
+remote:        Using sprockets 3.7.1
+remote:        Using mime-types 3.1
+remote:        Using uglifier 3.0.4
+remote:        Using coffee-script 2.4.1
+remote:        Using turbolinks 5.0.1
+remote:        Using faraday 0.12.1
+remote:        Using activesupport 4.2.5
+remote:        Using loofah 2.0.3
+remote:        Using mail 2.6.4
+remote:        Using stripe 2.12.0
+remote:        Using rails-deprecated_sanitizer 1.0.3
+remote:        Using globalid 0.3.7
+remote:        Using activemodel 4.2.5
+remote:        Using jbuilder 2.6.1
+remote:        Using rails-html-sanitizer 1.0.3
+remote:        Using sdoc 0.4.2
+remote:        Using activejob 4.2.5
+remote:        Using activerecord 4.2.5
+remote:        Using rails-dom-testing 1.0.8
+remote:        Using actionview 4.2.5
+remote:        Using actionpack 4.2.5
+remote:        Using actionmailer 4.2.5
+remote:        Using railties 4.2.5
+remote:        Using sprockets-rails 3.2.0
+remote:        Using coffee-rails 4.1.1
+remote:        Using jquery-rails 4.2.2
+remote:        Using responders 2.4.0
+remote:        Using rails 4.2.5
+remote:        Using sass-rails 5.0.6
+remote:        Using devise 4.3.0
+remote:        Using rails-controller-testing 0.0.3
+remote:        Bundle complete! 20 Gemfile dependencies, 62 gems now installed.
+remote:        Gems in the groups development and test were not installed.
+remote:        Bundled gems are installed into ./vendor/bundle.
+remote:        Bundle completed (2.48s)
+remote:        Cleaning up the bundler cache.
+remote: -----> Installing node-v6.10.0-linux-x64
+remote: -----> Detecting rake tasks
+remote: -----> Preparing app for Rails asset pipeline
+remote:        Running: rake assets:precompile
+remote:        I, [2017-07-05T16:37:03.758456 #368]  INFO -- : Writing /tmp/build_471baf66232118d9c874c5f4bfaa2151/public/assets/application-0d3d7634f458a236622369fa6c327f88063c5ad365eb41872abac8edc379c900.js
+remote:        I, [2017-07-05T16:37:03.759022 #368]  INFO -- : Writing /tmp/build_471baf66232118d9c874c5f4bfaa2151/public/assets/application-0d3d7634f458a236622369fa6c327f88063c5ad365eb41872abac8edc379c900.js.gz
+remote:        Asset precompilation completed (6.02s)
+remote:        Cleaning assets
+remote:        Running: rake assets:clean
+remote:        I, [2017-07-05T16:37:05.493255 #387]  INFO -- : Removed application-dbe7a20499461772a4f74501e0b6e10304a8e4a9f303ce0b26248e4d3546feac.js
+remote: 
+remote: ###### WARNING:
+remote:        Include 'rails_12factor' gem to enable all platform features
+remote:        See https://devcenter.heroku.com/articles/rails-integration-gems for more information.
+remote: 
+remote: ###### WARNING:
+remote:        You have not declared a Ruby version in your Gemfile.
+remote:        To set your Ruby version add this line to your Gemfile:
+remote:        ruby '2.3.4'
+remote:        # See https://devcenter.heroku.com/articles/ruby-versions for more information.
+remote: 
+remote: ###### WARNING:
+remote:        No Procfile detected, using the default web server.
+remote:        We recommend explicitly declaring how to boot your server process via a Procfile.
+remote:        https://devcenter.heroku.com/articles/ruby-default-web-server
+remote: 
+remote: -----> Discovering process types
+remote:        Procfile declares types     -> (none)
+remote:        Default types for buildpack -> console, rake, web, worker
+remote: 
+remote: -----> Compressing...
+remote:        Done: 42.1M
+remote: -----> Launching...
+remote:        Released v44
+remote:        https://jhilliard.herokuapp.com/ deployed to Heroku
+remote: 
+remote: Verifying deploy... done.
+To https://git.heroku.com/jhilliard.git
+   7a59abc..2217903  ajax -> master
