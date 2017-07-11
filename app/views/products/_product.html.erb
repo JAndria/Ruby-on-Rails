@@ -1,3 +1,4 @@
+<% cache product do %>
 <div class="col-md-3 col-xs-12 item-box">
   <div class="item">
     <p class="item-name"><%= link_to product.name, product_path(product.id, tab: "desc") %></p>
@@ -25,3 +26,4 @@
     
   </div>
 </div>
+<% end %>
