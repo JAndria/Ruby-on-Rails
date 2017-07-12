@@ -15,6 +15,7 @@
     <% end %>
     <br>
     <p>Average Rating: <div class = "rated" id = "average-rating" data-score="<%= @product.average_rating %>"></div></p>
+    <p>This product has been viewed <%= $redis.get(@product_key) %> times</p>
     <br>
     <h3><span class="prod-label">Price: </span>$ <%= number_with_precision(@product.price, precision: 2) %></h3>
     <br>
