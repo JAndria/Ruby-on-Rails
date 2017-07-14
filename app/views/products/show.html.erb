@@ -5,7 +5,7 @@
 <% end %>
 <%= link_to 'Back', products_path, class: "option-link" %>
 
-<div class="container-fluid product-box">
+<div class="container-fluid product-box" data-product-id="<%= @product.id %>">
   <div class="col-md-6 col-xs-12 product-img-box">
     <%= image_tag(@product.image_url, class: "img-responsive product-img img-zoom", data_zoom_image: @product.image_url ) %>
   </div>
