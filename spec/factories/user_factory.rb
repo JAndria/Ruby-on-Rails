@@ -15,5 +15,5 @@ FactoryGirl.define do
     first_name "Admin"
     last_name "User"
     admin true
-end
+  end
 end
